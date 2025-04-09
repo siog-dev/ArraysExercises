@@ -18,7 +18,7 @@ public class PrimeParser {
 	
 	//CONSTRUCTOR
 	public PrimeParser() {
-		
+		numbers = new int[size];
 	}
 	
 	public static void main(String[] args) {
