@@ -37,7 +37,6 @@ public class PrimeParser {
 		return true; // If no factors found, it's prime
 	}
 	
-	
 	public static void main(String[] args) {
 		// Create an instance of PrimeParser, passing in the size of args
 		PrimeParser parser = new PrimeParser(args.length);
@@ -45,6 +44,9 @@ public class PrimeParser {
 		int count = 0; // Track prime numbers
 
 		for (int i = 0; i < args.length; i++) {
+			// Convert String argument to integer
+			int number = Integer.parseInt(args[i]);
+			
 			if (isPrime(number)) { // Check if the number is prime
 				parser.numbers[count] = number;
 				count++;
@@ -54,7 +56,6 @@ public class PrimeParser {
 		for (int i = 0; i < count; i++) {
 			System.out.println(parser.numbers[i] + " ");
 		}
-		System.out.println();
 	}
 	
 }
