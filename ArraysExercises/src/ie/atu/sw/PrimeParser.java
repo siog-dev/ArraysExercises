@@ -21,6 +21,24 @@ public class PrimeParser {
 		numbers = new int[size];
 	}
 	
+	//METHOD TO CHECK FOR PRIME NUMBERS
+	public static boolean isPrime(int number) {
+
+		if (number <= 1) {
+			return false; // 0 and 1 are not prime
+		}
+		
+		// Loop from 2 to the square root of the number
+		for (int i = 2; i <= Math.sqrt(number); i++) {
+			if (number % i == 0) {
+				return false; // If divisible by any number, it's not prime
+			}
+		}
+		
+		return true; // If no factors found, it's prime
+	}
+	
+	
 	public static void main(String[] args) {
 		for (int i = 0; i < args.length; i++) {
 			String string = args[i];
