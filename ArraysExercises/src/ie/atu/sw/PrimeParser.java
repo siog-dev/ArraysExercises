@@ -17,7 +17,7 @@ public class PrimeParser {
 	private int[] numbers = null;
 	
 	//CONSTRUCTOR
-	public PrimeParser() {
+	public PrimeParser(int size) {
 		numbers = new int[size];
 	}
 	
