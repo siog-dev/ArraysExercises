@@ -17,13 +17,12 @@ public class PrimeParser {
 	private int[] numbers = null;
 	
 	//CONSTRUCTOR
-	public PrimeParser(int size) {
-		numbers = new int[size];
+	public PrimeParser(int size) { // pass the size
+		numbers = new int[size]; // Initialize the numbers
 	}
 	
 	//METHOD TO CHECK FOR PRIME NUMBERS
 	public static boolean isPrime(int number) {
-
 		if (number <= 1) {
 			return false; // 0 and 1 are not prime
 		}
@@ -40,10 +39,22 @@ public class PrimeParser {
 	
 	
 	public static void main(String[] args) {
+		// Create an instance of PrimeParser, passing in the size of args
+		PrimeParser parser = new PrimeParser(args.length);
+		
+		int count = 0; // Track prime numbers
+
 		for (int i = 0; i < args.length; i++) {
-			String string = args[i];
-			
+			if (isPrime(number)) { // Check if the number is prime
+				parser.numbers[count] = number;
+				count++;
+			}
 		}
+		// Output the prime numbers (up to 'count')
+		for (int i = 0; i < count; i++) {
+			System.out.println(parser.numbers[i] + " ");
+		}
+		System.out.println();
 	}
 	
 }
