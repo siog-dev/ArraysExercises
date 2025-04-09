@@ -1,7 +1,7 @@
 package ie.atu.sw;
 
 /*
- * Write a programme called PrimeParser that reads in 
+ * Write a program called PrimeParser that reads in 
  * a set of numbers into the String[] args array of main() 
  * and then converts them to an integer array. The integer 
  * array should discard any number that is not prime. 
@@ -14,6 +14,7 @@ package ie.atu.sw;
 public class PrimeParser {
 	
 	//INSTANCE VARIABLES
+	private int[] numbers = null;
 	
 	//CONSTRUCTOR
 	
